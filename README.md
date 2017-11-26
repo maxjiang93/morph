@@ -13,7 +13,7 @@ filename2 = 'horse50k.ply';
  ```
 
 ## Compile mex code in gptoolbox
-In general, refer to [alecjacobson/gptoolbox](https://github.com/alecjacobson/gptoolbox) for instruction on compiling gptoolbox (which is included in a subdirectory in morph). The compilation guidelines apply to Mac/Linux computers. For Windows computers, refer the the getaround below.
+In general, refer to [alecjacobson/gptoolbox](https://github.com/alecjacobson/gptoolbox) for instruction on compiling gptoolbox (which is included in a subdirectory in morph). The compilation guidelines apply to Mac/Linux computers. For Windows computers, refer to the getaround below.
 
 ## Windows Users
 ### Compile mex code
