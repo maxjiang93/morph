@@ -9,7 +9,7 @@ filename1 = 'cow40k.ply';
 filename2 = 'horse50k.ply';
 [F,VS1,VS2] = morph_multi(n_feat,filename1,filename2);
  V = 0.5 * VS1 + 0.5 * VS2;
- writeSTL("morphed_mesh.stl", V, F);
+ writeSTL('morphed_mesh.stl', V, F);
  ```
 
 ## Compile mex code in gptoolbox
