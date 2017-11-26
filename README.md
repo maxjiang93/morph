@@ -2,14 +2,14 @@
 This is my personal research code for morphing multiple genus zero shapes. Code is written in Matlab. Use at your own risk. 
 
 ## How to use the code
-My codes are under `morphing_codes_max`. Put the mesh files under `mesh_files`. Run and go through `run_demo.m` for an example on how to use the code. The main code is `morphing_codes_max/morph_multi.m`, which returns a face matrix `F` and various vertex matrix `VS1`, `VS2`, ... Create a morph by linearly interpolating the vertex matrices. Then you may export it to a standard mesh format. e.g
+My codes are under `morphing_codes_max`. Put the mesh files under `mesh_files`. Run and go through `run_demo.m` for an example on how to use the code. The main code is `morphing_codes_max/morph_multi.m`, which returns a face matrix `F` and various vertex matrix `VS1`, `VS2`, ... Create a morph by linearly interpolating the vertex matrices. Then you may export it to a standard mesh format. Here is a minimal example illustrating its usage:
 ```matlab
 n_feat = 9; % Number of feature points to match between models
-filename1 = 'cow40k.ply';
-filename2 = 'horse50k.ply';
-[F,VS1,VS2] = morph_multi(n_feat,filename1,filename2);
- V = 0.5 * VS1 + 0.5 * VS2;
- writeSTL('morphed_mesh.stl', V, F);
+filename1 = 'cow40k.ply';  % Filename of the first mesh file
+filename2 = 'horse50k.ply';  % Filename of the second mesh file
+[F,VS1,VS2] = morph_multi(n_feat,filename1,filename2);  % Call the morph function which returns the Face and various Vertex matrices
+ V = 0.5 * VS1 + 0.5 * VS2;  % Create a 50-50 morph
+ writeSTL('morphed_mesh.stl', V, F);  % Save the result to stl format (alternatively use writeOFF, writeOBJ, writePLY for other output formats)
  ```
 
 ## Compile mex code in gptoolbox
