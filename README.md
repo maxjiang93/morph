@@ -2,7 +2,7 @@
 Research code for morphing multiple genus zero shapes. Code is written in Matlab.
 
 ## How to use the code
-My codes are under `morphing_codes_max`. Put the mesh files under `mesh_files`. Run and go through `run_demo.m` for an example on how to use the code. The main code is `morphing_codes_max/morph_multi.m`, which returns a face matrix `F` and various vertex matrix `VS1`, `VS2`, ... Create a morph by linearly interpolating the vertex matrices. Then you may export it to a standard mesh format. Here is a minimal example illustrating its usage:
+Main codes are under `morph`. Put the mesh files under `mesh_files`. Run and go through `run_demo.m` for an example on how to use the code. The main code is `morph/morph_multi.m`, which returns a face matrix `F` and various vertex matrix `VS1`, `VS2`, ... Create a morph by linearly interpolating the vertex matrices. Then you may export it to a standard mesh format. Here is a minimal example illustrating its usage:
 ```matlab
 n_feat = 9; % Number of feature points to match between models
 filename1 = 'cow40k.ply';  % Filename of the first mesh file
@@ -33,3 +33,6 @@ STDCPP11, ...
 3. Move the generated `ray_mesh_intersect.mexw64` to `gptoolbox/mesh`
 ### Set path
 In the demo code `run_demo` line 4, change `system('pwd')` to `system('cd')` in Windows.
+
+### Acknowledgements
+We extensively utilize the gptoolbox package and we thank the original authors of the toolbox.
