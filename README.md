@@ -1,5 +1,5 @@
 # MeshMorph
-Research code for morphing multiple genus zero shapes. Code is written in Matlab.
+Code for morphing multiple genus zero shapes with simple GUI for choosing feature points in corresponding shapes. Code is written in Matlab.
 
 ## How to use the code
 Main codes are under `morph`. Put the mesh files under `mesh_files`. Run and go through `run_demo.m` for an example on how to use the code. The main code is `morph/morph_multi.m`, which returns a face matrix `F` and various vertex matrix `VS1`, `VS2`, ... Create a morph by linearly interpolating the vertex matrices. Then you may export it to a standard mesh format. Here is a minimal example illustrating its usage:
